@@ -5,6 +5,6 @@ This repository contains my personal coursework for the COM2044 (Object Oriented
 ***Please note*** 
 - This repository does NOT include commits for initial 6 laboratory sessions, only for week 7 and afterwards.
 
-*Technologies used*
+**Technologies used**
 - Java
 - Object oriented programming fundamentals
