@@ -2,9 +2,9 @@ public class PaymentFactory {
     private PaymentFactory() {
     }
 
-    public static PaymentProcessor getPaymentProcessor(String type) {
+    public static PaymentProcessor createProcessor(String type) {
         switch (type.toLowerCase()) {
-            case "creditcard":
+            case "credit":
                 return new CreditCardProcessor();
             case "paypal":
                 return new PayPalProcessor();
