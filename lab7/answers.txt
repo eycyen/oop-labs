@@ -1,0 +1,5 @@
+1- Since the payment processors do not share common fields or variables, using an interface provides abstraction. It ensures every class implements the processPayment method individually while keeping the system flexible.
+
+2- When we use factory method to process all the payment methods, it was easier to call the create payment method from one object instead of trying if-else or switch case for main method. We just used object.create to call our method and process called individually for every object we also made sure if we want to add more payment methods in the future, factory method is the one that should be changed and not main.
+
+3- If user types an invalid payment type or invalid amount we terminated the program and send user an error message to try again with correct inputs. This prevented any future false inputs from user. This made the system more robust againts bad data and improved user experience by telling them what's wrong.
