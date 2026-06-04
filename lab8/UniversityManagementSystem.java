@@ -37,7 +37,7 @@ public class UniversityManagementSystem {
         System.out.println();
 
         System.out.println("=== Students Sorted by GPA ===");
-        Collections.sort(students);
+        Collections.sort(students, Collections.reverseOrder());
         for (Student s : students) {
             System.out.printf("%s - %.2f\n",s.getName(),s.getGpa());
         }
