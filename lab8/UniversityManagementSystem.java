@@ -1,3 +1,6 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -40,6 +43,23 @@ public class UniversityManagementSystem {
         Collections.sort(students, Collections.reverseOrder());
         for (Student s : students) {
             System.out.printf("%s - %.2f\n",s.getName(),s.getGpa());
+        }
+        System.out.println();
+
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("lab8/students.txt"))) {
+            for (Student s : students) {
+                String content = String.format("%d | %s | %s | GPA: %.2f\n",
+                s.getId(),
+                s.getName(),
+                s.getDepartment(),
+                s.getGpa()
+                );
+                writer.write(content);
+            }
+            System.out.println("Student information was written to students.txt successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
