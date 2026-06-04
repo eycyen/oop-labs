@@ -32,7 +32,7 @@ public class AcademicStaff extends Person implements Payable {
 
     @Override
     public void displayInfo() {
-        System.out.printf("Academic Staff : %d | %s | %s | Salary : %.1f",
+        System.out.printf("Academic Staff: %d | %s | %s | Salary: %.1f",
         this.getId(),
         this.getName(),
         this.getTitle(),
