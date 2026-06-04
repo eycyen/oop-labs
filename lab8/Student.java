@@ -6,7 +6,7 @@ public class Student extends Person implements Comparable<Student> {
         super(id,name);
         this.department = department;
         if (gpa < 0.0 || gpa > 4.0) {
-            throw new InvalidGPAException("GPA must be in between 0.0 and 4.0.");
+            throw new InvalidGPAException("Error: GPA must be between 0 and 4");
         } 
         this.gpa = gpa;
     }
@@ -17,7 +17,7 @@ public class Student extends Person implements Comparable<Student> {
 
     public void setGpa(double gpa) throws InvalidGPAException {
         if (gpa < 0.0 || gpa > 4.0) {
-            throw new InvalidGPAException("GPA must be in between 0.0 and 4.0.");
+            throw new InvalidGPAException("Error: GPA must be between 0 and 4");
         } 
         this.gpa = gpa;
     }
