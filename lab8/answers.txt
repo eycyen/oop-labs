@@ -1,0 +1,20 @@
+1. Why is Person defined as an abstract class instead of a regular class?
+Person is defined as an abstract class because we don't need to create an object directly from it. It acts as a base template for its child classes like Student and AcademicStaff. By making it abstract, we can ensure that every subclass must have its own version of methods like displayInfo().
+
+2. What are the advantages of using the Payable interface for salary calculation?
+Using the Payable interface gives us flexibility. It ensures that any class implementing this interface must provide a calculateSalary() method. This makes it very easy to add new types of staff to the system in the future without breaking the existing code.
+
+3. How does polymorphism help when storing different object types in ArrayList<Person>?
+Polymorphism allows us to treat different object types (like Student, Professor, and ResearchAssistant) as their parent type (Person). Because of this, we can store all of them in a single list. When we call the displayInfo() method in a loop, Java automatically runs the correct version of the method for each specific object.
+
+4. Why is instanceof required before downcasting?
+The instanceof keyword checks if an object is really a specific type before we downcast it. If we try to downcast a Person to an AcademicStaff without checking, and that Person is actually a Student, the program will crash with a ClassCastException. It provides a safety check.
+
+5. What is the benefit of using a generic repository class?
+A generic repository class allows us to write a single class that can work with any data type. Instead of writing separate repository classes for Students or Professors, we can use <T> to write the code just once. This prevents code repetition and makes our project more reusable.
+
+6. Why should invalid GPA values be handled with a custom exception?
+A custom exception like InvalidGPAException makes the error much clearer. When developers see this error, they immediately understand that the problem is about a wrong GPA input. It separates standard system errors from specific university rules.
+
+7. How does implementing Comparable<Student> help with sorting students?
+By implementing the Comparable<Student> interface, we define a natural sorting rule for Student objects. We override the compareTo() method to tell Java how to compare two students based on their GPA. After doing this, we can easily sort lists using Collections.sort().
