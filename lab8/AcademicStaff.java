@@ -36,7 +36,7 @@ public class AcademicStaff extends Person implements Payable {
         this.getId(),
         this.getName(),
         this.getTitle(),
-        this.getBaseSalary()
+        this.calculateSalary()
         );
     }
 

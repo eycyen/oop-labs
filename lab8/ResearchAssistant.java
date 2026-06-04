@@ -26,7 +26,7 @@ public class ResearchAssistant extends AcademicStaff {
         this.getId(),
         this.getName(),
         this.getTitle(),
-        this.getBaseSalary()
+        this.calculateSalary()
         );
     }
 
