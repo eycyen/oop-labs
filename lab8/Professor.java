@@ -22,7 +22,7 @@ public class Professor extends AcademicStaff {
 
     @Override
     public void displayInfo() {
-        System.out.printf("Professor: %d | %s | %s | Salary: %.1f",
+        System.out.printf("Professor: %d | %s | %s | Salary: %.1f\n",
         this.getId(),
         this.getName(),
         this.getTitle(),

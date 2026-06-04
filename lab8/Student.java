@@ -32,7 +32,7 @@ public class Student extends Person implements Comparable<Student> {
 
     @Override
     public void displayInfo() {
-        System.out.printf("Student: %d | %s | %s | GPA: %.2f",
+        System.out.printf("Student: %d | %s | %s | GPA: %.2f\n",
         this.getId(),
         this.getName(),
         this.getDepartment(),

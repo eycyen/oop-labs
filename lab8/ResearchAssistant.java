@@ -22,7 +22,7 @@ public class ResearchAssistant extends AcademicStaff {
 
     @Override
     public void displayInfo() {
-        System.out.printf("Research Assistant: %d | %s | %s | Salary: %.1f",
+        System.out.printf("Research Assistant: %d | %s | %s | Salary: %.1f\n",
         this.getId(),
         this.getName(),
         this.getTitle(),

@@ -9,11 +9,13 @@ public class UniversityManagementSystem {
         try {
             people.add(new Student(1001, "Ahmet", "Computer Engineering", 3.85));
             people.add(new Student(1002, "Ayse", "Software Engineering", 3.40));
+            students.add(new Student(1001, "Ahmet", "Computer Engineering", 3.85));
+            students.add(new Student(1002, "Ayse", "Software Engineering", 3.40));
         }
         catch (InvalidGPAException e) {
             System.out.println(e);
         }
-        
+
         people.add(new Professor(2001, "Mehmet", "Prof. Dr.", 30000.0, 5));
         people.add(new Professor(2002, "Elif", "Assoc. Prof.", 30000.0, 2));
         people.add(new ResearchAssistant(3001, "Ali", "Res. Asst.", 20000.0, 4));
@@ -29,7 +31,7 @@ public class UniversityManagementSystem {
         for (Person p : people) {
             if (p instanceof AcademicStaff) {
                 AcademicStaff staff = (AcademicStaff) p;
-                System.out.printf("%s salary: %.1f",staff.getName(),staff.calculateSalary());
+                System.out.printf("%s salary: %.1f\n",staff.getName(),staff.calculateSalary());
             }
         }
         System.out.println();
@@ -37,7 +39,7 @@ public class UniversityManagementSystem {
         System.out.println("=== Students Sorted by GPA ===");
         Collections.sort(students);
         for (Student s : students) {
-            System.out.printf("%s - %.2f",s.getName(),s.getGpa());
+            System.out.printf("%s - %.2f\n",s.getName(),s.getGpa());
         }
     }
 }
